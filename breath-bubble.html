@@ -4,6 +4,8 @@
             <div class="external-bubble">
                 <span class="ball"></span>
                 <div class="internal-bubble"></div>
+                <p class="breathe-in">Breathe in</p>
+                <p class="breathe-out">Breathe out</p>
             </div>
         </div>
     </body>
@@ -30,6 +32,7 @@ body {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .ball {
@@ -37,9 +40,9 @@ body {
     height: 20px;
     position: absolute;
     background-color: black;
+    z-index: 2;
     border-radius: 50%;
-    z-index: 100;
-    animation: revolve 10s normal infinite linear;
+    animation: revolve 9s normal infinite linear;
 }
 
 .internal-bubble {
@@ -49,7 +52,23 @@ body {
     background-color: blue;
     border-radius: 50%;
     position: absolute;
-    animation: expand 5s alternate infinite linear;
+    animation: expand 4.5s alternate infinite linear;
+}
+
+.external-bubble p {
+    color: white;
+    font-size: 20px;
+    z-index: 100;
+    position: absolute;
+    margin: 0;
+}
+
+.breathe-in {
+    animation: appear 9s normal infinite linear;
+}
+
+.breathe-out {
+    animation: appear 9s reverse infinite linear;
 }
 
 @keyframes revolve {
@@ -65,9 +84,20 @@ body {
     0%      {
         transform: scale(1);
     }
-
     100%    {
         transform: scale(1.2);
+    }
+}
+
+@keyframes appear {
+    0%      {
+        opacity: 1;
+    }
+    50%     {
+        opacity: 0;
+    }
+    100%    {
+        opacity: 0;
     }
 }
 </style>
