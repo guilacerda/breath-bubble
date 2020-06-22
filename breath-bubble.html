@@ -2,7 +2,7 @@
     <body>
         <div class="main">
             <div class="external-bubble">
-
+                <div class="internal-bubble"></div>
             </div>
         </div>
     </body>
@@ -22,10 +22,20 @@ body {
 }
 
 .external-bubble {
-    border-style: solid;
-    border-radius: 12.5vw;
-    border-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid blueviolet;
+    border-radius: 50%;
     height: 25vw;
     width: 25vw;
 }
+
+.internal-bubble {
+    border: 1px solid blue;
+    border-radius: 50%;
+    height: 20.84vw;
+    width: 20.84vw;
+}
+
 </style>
