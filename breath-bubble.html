@@ -33,9 +33,15 @@ body {
 
 .internal-bubble {
     border: 1px solid blue;
+    background-color: blue;
     border-radius: 50%;
     height: 20.84vw;
     width: 20.84vw;
+    animation: expand 5s alternate infinite ease-in;
 }
 
+@keyframes expand {
+  0%   {transform: scale(1);}
+  100% {transform: scale(1.2);}
+}
 </style>
